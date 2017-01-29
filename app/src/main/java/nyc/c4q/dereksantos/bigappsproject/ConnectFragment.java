@@ -15,7 +15,7 @@ public class ConnectFragment extends Fragment {
 
     private String title;
     private int page;
-    private static final String INT_TAG = "one";
+    private static final String INT_TAG = "two";
     private static final String TITLE_TAG = "cFrag";
 
     public static Fragment newInstance(int page, String title) {
@@ -30,7 +30,7 @@ public class ConnectFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        page = getArguments().getInt(INT_TAG, 1);
+        page = getArguments().getInt(INT_TAG, 2);
         title = getArguments().getString(TITLE_TAG);
     }
 
