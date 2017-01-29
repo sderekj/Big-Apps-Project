@@ -1,7 +1,9 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.network;
 
 import java.util.List;
 
+import nyc.c4q.dereksantos.bigappsproject.DataRespone2;
+import nyc.c4q.dereksantos.bigappsproject.DataResponse1;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
