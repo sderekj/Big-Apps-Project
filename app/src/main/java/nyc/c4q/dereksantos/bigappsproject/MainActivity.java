@@ -9,7 +9,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView iconRv;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
         iconRv = (RecyclerView) findViewById(R.id.icon_rv);
         iconRv.setLayoutManager(new GridLayoutManager(this,2));
-        iconRv.setAdapter(new QuestionIconAdapter());
+        iconRv.setAdapter(new CategoryIconAdapter());
     }
 }
