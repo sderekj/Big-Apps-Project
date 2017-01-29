@@ -32,18 +32,16 @@ public class QuestionsFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        page = getArguments().getInt(INT_TAG, 0);
+        page = getArguments().getInt(INT_TAG, 1);
         title = getArguments().getString(TITLE_TAG);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.question_fragment, container, false);
-
         recyclerView = (RecyclerView) view.findViewById(R.id.questions_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(new QuestionsAdapter());
-
         return view;
     }
 }
