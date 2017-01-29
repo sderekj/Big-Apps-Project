@@ -6,37 +6,37 @@ import android.view.ViewGroup;
 import java.util.Arrays;
 import java.util.List;
 
-import nyc.c4q.dereksantos.bigappsproject.model.QuestionIcon;
+import nyc.c4q.dereksantos.bigappsproject.model.CategoryIcon;
 
 /**
  * Created by akashaarcher on 1/28/17.
  */
 
-public class QuestionIconAdapter extends RecyclerView.Adapter  {
+public class CategoryIconAdapter extends RecyclerView.Adapter  {
 
-    private List<QuestionIcon> icons = Arrays.asList(
-            new QuestionIcon(R.drawable.baby, "Baby"),
-            new QuestionIcon(R.drawable.child, "Children"),
-            new QuestionIcon(R.drawable.legal, "Legal Help"),
-            new QuestionIcon(R.drawable.food, "Food & Nutrition"),
-            new QuestionIcon(R.drawable.healthcare, "Healthcare"),
-            new QuestionIcon(R.drawable.housing, "Housing"),
-            new QuestionIcon(R.drawable.school, "Education"),
-            new QuestionIcon(R.drawable.transport, "Transportation")
+    private List<CategoryIcon> icons = Arrays.asList(
+            new CategoryIcon(R.drawable.baby, "Baby"),
+            new CategoryIcon(R.drawable.child, "Children"),
+            new CategoryIcon(R.drawable.legal, "Legal Help"),
+            new CategoryIcon(R.drawable.food, "Food & Nutrition"),
+            new CategoryIcon(R.drawable.healthcare, "Healthcare"),
+            new CategoryIcon(R.drawable.housing, "Housing"),
+            new CategoryIcon(R.drawable.school, "Education"),
+            new CategoryIcon(R.drawable.transport, "Transportation")
     );
 
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new QuestionIconViewHolder(parent);
+        return new CategoryIconViewHolder(parent);
     }
 
 
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        QuestionIconViewHolder iconViewHolder = (QuestionIconViewHolder) holder;
-        QuestionIcon iconList = icons.get(position);
+        CategoryIconViewHolder iconViewHolder = (CategoryIconViewHolder) holder;
+        CategoryIcon iconList = icons.get(position);
         iconViewHolder.bind(iconList);
     }
 
