@@ -6,12 +6,12 @@ import android.support.annotation.DrawableRes;
  * Created by akashaarcher on 1/28/17.
  */
 
-public class QuestionIcon {
+public class CategoryIcon {
 
     private Integer icon;
     private String title;
 
-    public QuestionIcon(@DrawableRes Integer resource, String title) {
+    public CategoryIcon(@DrawableRes Integer resource, String title) {
         this.icon = resource;
         this.title = title;
     }

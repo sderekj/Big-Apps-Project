@@ -10,20 +10,20 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import nyc.c4q.dereksantos.bigappsproject.model.QuestionIcon;
+import nyc.c4q.dereksantos.bigappsproject.model.CategoryIcon;
 
 /**
  * Created by akashaarcher on 1/28/17.
  */
 
-public class QuestionIconViewHolder extends RecyclerView.ViewHolder {
+public class CategoryIconViewHolder extends RecyclerView.ViewHolder {
 
     private final View view;
     private final ImageView iconPic;
     private final TextView iconName;
 
 
-    public QuestionIconViewHolder(ViewGroup parent) {
+    public CategoryIconViewHolder(ViewGroup parent) {
         super(inflateView(parent));
         view = itemView;
         iconPic = (ImageView) view.findViewById(R.id.icon_img);
@@ -35,7 +35,7 @@ public class QuestionIconViewHolder extends RecyclerView.ViewHolder {
         return inflater.inflate(R.layout.icon_layout, parent, false);
     }
 
-    public void bind(QuestionIcon icon) {
+    public void bind(CategoryIcon icon) {
         iconName.setText(icon.getTitle());
         Integer resource = icon.getImageResource();
         Picasso.with(view.getContext())
