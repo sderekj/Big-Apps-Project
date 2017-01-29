@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BigAppsProject</string>
+    <string name="questions">Questions</string>
+    <string name="resources">Resources</string>
+    <string name="connect">Connect</string>
 </resources>

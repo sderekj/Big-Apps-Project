@@ -1,5 +1,6 @@
 package nyc.c4q.dereksantos.bigappsproject;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,14 @@ public class QuestionIconViewHolder extends RecyclerView.ViewHolder {
                 .load(resource)
                 .resize(96, 96)
                 .into(iconPic);
+
+        iconPic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), TabActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
 //
