@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-public class MainActivity extends AppCompatActivity {
+public class CategoryIconActivity extends AppCompatActivity {
 
     private RecyclerView iconRv;
 
