@@ -21,5 +21,7 @@ public class TabActivity extends AppCompatActivity {
         viewPager.setAdapter(fragmentPagerAdapter);
 
         tabLayout  = (TabLayout) findViewById(R.id.sliding_tabs);
+
+        viewPager.setCurrentItem(1);
     }
 }

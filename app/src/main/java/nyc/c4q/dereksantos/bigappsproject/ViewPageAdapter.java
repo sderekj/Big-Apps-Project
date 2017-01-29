@@ -18,21 +18,22 @@ public class ViewPageAdapter extends FragmentPagerAdapter {
 
     public ViewPageAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
+        titles.add("Resources");
         titles.add("Questions");
         titles.add("Connect");
-        titles.add("Resources");
+
     }
 
     @Override
     public Fragment getItem(int position) {
 
-        switch (position){
+        switch (position) {
             case 0:
-                return QuestionsFragment.newInstance(0, "qFrag");
+                return ResourcesFragment.newInstance(0, "rFrag");
             case 1:
-                return ConnectFragment.newInstance(1, "cFrag");
+                return QuestionsFragment.newInstance(1, "qFrag");
             case 2:
-                return ResourcesFragment.newInstance(2,"rFrag");
+                return ConnectFragment.newInstance(2, "cFrag");
         }
         return null;
     }
