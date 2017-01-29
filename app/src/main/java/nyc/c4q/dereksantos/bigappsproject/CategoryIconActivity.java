@@ -2,12 +2,14 @@ package nyc.c4q.dereksantos.bigappsproject;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 public class CategoryIconActivity extends AppCompatActivity {
 
     private RecyclerView iconRv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
