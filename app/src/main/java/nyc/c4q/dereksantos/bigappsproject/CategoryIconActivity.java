@@ -1,12 +1,15 @@
 package nyc.c4q.dereksantos.bigappsproject;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-public class MainActivity extends AppCompatActivity {
+public class CategoryIconActivity extends AppCompatActivity {
+
     private RecyclerView iconRv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         iconRv = (RecyclerView) findViewById(R.id.icon_rv);
         iconRv.setLayoutManager(new GridLayoutManager(this,2));
-        iconRv.setAdapter(new QuestionIconAdapter());
-
+        iconRv.setAdapter(new CategoryIconAdapter());
     }
 }

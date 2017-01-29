@@ -4,4 +4,7 @@
     <string name="resources">Resources</string>
     <string name="connect">Connect</string>
     <string name="tip_title">Did you know...?</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_profile">Profile</string>
 </resources>
