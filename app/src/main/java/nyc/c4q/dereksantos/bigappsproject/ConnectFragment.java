@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 /**
  * Created by shannonalexander-navarro on 1/28/17.
@@ -18,7 +17,6 @@ public class ConnectFragment extends Fragment {
     private int page;
     private static final String INT_TAG = "one";
     private static final String TITLE_TAG = "cFrag";
-    private TextView tabTitle;
 
     public static Fragment newInstance(int page, String title) {
         ConnectFragment connectFrag = new ConnectFragment();
@@ -40,7 +38,6 @@ public class ConnectFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.connect_fragment,container,false);
-        tabTitle = (TextView) view.findViewById(R.id.connect_title_tv);
         return view;
     }
 }

@@ -17,6 +17,7 @@ public class QuestionIconAdapter extends RecyclerView.Adapter  {
     private List<QuestionIcon> icons = Arrays.asList(
             new QuestionIcon(R.drawable.baby, "Baby"),
             new QuestionIcon(R.drawable.child, "Children"),
+            new QuestionIcon(R.drawable.legal, "Legal Help"),
             new QuestionIcon(R.drawable.food, "Food & Nutrition"),
             new QuestionIcon(R.drawable.healthcare, "Healthcare"),
             new QuestionIcon(R.drawable.housing, "Housing"),
