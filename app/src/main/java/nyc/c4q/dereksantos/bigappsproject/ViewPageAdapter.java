@@ -5,4 +5,6 @@ package nyc.c4q.dereksantos.bigappsproject;
  */
 
 public class ViewPageAdapter {
+
+
 }
