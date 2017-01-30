@@ -11,21 +11,11 @@ import java.util.List;
  * Created by SACC on 1/29/17.
  */
 public class QuestionsAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
-    List<Question> questionList = Arrays.asList(
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?"),
-            new Question("How are you?", "How the hell are you today?")
-    );
+    List<Question> questionList = new ArrayList<>();
+
+    public QuestionsAdapter(List<Question> list) {
+        this.questionList = list;
+    }
 
 
     @Override
