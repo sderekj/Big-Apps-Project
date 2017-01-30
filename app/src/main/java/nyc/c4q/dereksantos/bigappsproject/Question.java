@@ -1,12 +1,17 @@
 package nyc.c4q.dereksantos.bigappsproject;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by SACC on 1/29/17.
  */
 
 public class Question {
 
+    @SerializedName("facilityname")
     private String title;
+
+    @SerializedName("facilitystreetname")
     private String description;
 
     public Question(String title, String description) {

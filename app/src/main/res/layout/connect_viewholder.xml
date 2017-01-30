@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/question_title_tv"
+            android:id="@+id/connect_title_tv"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:padding="4dp"
@@ -26,7 +26,7 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/question_description_tv"
+            android:id="@+id/connect_description_tv"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:padding="4dp"
