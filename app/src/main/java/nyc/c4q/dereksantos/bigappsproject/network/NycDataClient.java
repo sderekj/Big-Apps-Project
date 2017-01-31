@@ -1,5 +1,11 @@
 package nyc.c4q.dereksantos.bigappsproject.network;
 
+import java.util.List;
+
+import nyc.c4q.dereksantos.bigappsproject.DataResponse1;
+import nyc.c4q.dereksantos.bigappsproject.DataResponse2;
+import nyc.c4q.dereksantos.bigappsproject.Question;
+import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -8,20 +14,29 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class NycDataClient {
-
     private static final String API_URL = "https://data.cityofnewyork.us/";
+
+    public static NycDataClient instance;
 
     private final NycDataApi api;
 
-    private NycDataClient(NycDataApi api) { this.api = api; }
-
     public static NycDataClient getInstance() {
+        if (instance == null) {
+            instance = new NycDataClient();
+        }
+
+        return instance;
+    }
+
+    private NycDataClient() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        NycDataApi api = retrofit.create(NycDataApi.class);
+        api = retrofit.create(NycDataApi.class);
+    }
 
-        return new NycDataClient(api);
+    public Call<List<Question>> getApiStuff() {
+        return api.getData2();
     }
 }
