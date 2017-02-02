@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     CategoryIconFragment iconFragment = new CategoryIconFragment();
     UserProfileFragment profileFragment = new UserProfileFragment();
+    SearchFragment searchFragment = new SearchFragment();
 
 
     @Override
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         homeFragTransaction.commit();
 
         BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottom_nav);
-
+        bottomNav.setPadding(0, 0, 0, 0);
         bottomNav.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -34,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
                                 FragmentTransaction homeFragTransaction = getSupportFragmentManager().beginTransaction();
                                 homeFragTransaction.replace(R.id.main_container, iconFragment);
                                 homeFragTransaction.commit();
+                                break;
+
+                            case R.id.action_search:
+                                FragmentTransaction searchFragTransaction = getSupportFragmentManager().beginTransaction();
+                                searchFragTransaction.replace(R.id.main_container, searchFragment);
+                                searchFragTransaction.commit();
                                 break;
 
                             case R.id.action_profile:
