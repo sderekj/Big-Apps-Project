@@ -1,14 +1,16 @@
 package nyc.c4q.dereksantos.bigappsproject;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView iconRv;
+    CategoryIconFragment iconFragment = new CategoryIconFragment();
+    UserProfileFragment profileFragment = new UserProfileFragment();
 
 
     @Override
@@ -16,8 +18,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        iconRv = (RecyclerView) findViewById(R.id.icon_rv);
-        iconRv.setLayoutManager(new GridLayoutManager(this,2));
-        iconRv.setAdapter(new CategoryIconAdapter());
+        FragmentTransaction homeFragTransaction = getSupportFragmentManager().beginTransaction();
+        homeFragTransaction.replace(R.id.main_container, iconFragment);
+        homeFragTransaction.commit();
+
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottom_nav);
+
+        bottomNav.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_home:
+                                FragmentTransaction homeFragTransaction = getSupportFragmentManager().beginTransaction();
+                                homeFragTransaction.replace(R.id.main_container, iconFragment);
+                                homeFragTransaction.commit();
+                                break;
+
+                            case R.id.action_profile:
+                                FragmentTransaction profileFragTransaction = getSupportFragmentManager().beginTransaction();
+                                profileFragTransaction.replace(R.id.main_container, profileFragment);
+                                profileFragTransaction.commit();
+                                break;
+                        }
+                        return true;
+                    }
+                }
+        );
+
     }
 }
