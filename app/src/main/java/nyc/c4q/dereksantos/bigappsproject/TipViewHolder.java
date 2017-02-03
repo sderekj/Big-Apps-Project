@@ -21,7 +21,7 @@ public class TipViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(TipCard tipList) {
-        tipTitleTV.setText(tipList.getDidYou());
+        //tipTitleTV.setText(tipList.getDidYou());
         factoidTV.setText(tipList.getFactoid());
     }
 
