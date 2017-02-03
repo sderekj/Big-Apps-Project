@@ -7,6 +7,7 @@
     android:layout_marginTop="2dp"
     android:clickable="true"
     android:foreground="?selectableItemBackground"
+    app:cardBackgroundColor="#8bc34a"
     app:cardCornerRadius="2dp"
     app:cardElevation="2dp">
 
@@ -19,9 +20,9 @@
             android:id="@+id/question_title_tv"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:padding="4dp"
             android:ellipsize="end"
             android:maxLines="1"
+            android:padding="4dp"
             android:text=""
             android:textSize="24sp" />
 

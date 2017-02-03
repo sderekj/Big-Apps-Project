@@ -1,4 +1,4 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import nyc.c4q.dereksantos.bigappsproject.R;
+import nyc.c4q.dereksantos.bigappsproject.adapters.CategoryIconAdapter;
 
 /**
  * Created by akashaarcher on 1/30/17.

@@ -1,4 +1,4 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.model;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by SACC on 1/29/17.
  */
 
-public class Question {
+public class Resource {
 
     @SerializedName("facilityname")
     private String title;
@@ -14,7 +14,7 @@ public class Question {
     @SerializedName("facilitystreetname")
     private String description;
 
-    public Question(String title, String description) {
+    public Resource(String title, String description) {
         this.title = title;
         this.description = description;
     }

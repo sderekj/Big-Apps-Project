@@ -1,10 +1,13 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.viewholders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import nyc.c4q.dereksantos.bigappsproject.model.Resource;
+import nyc.c4q.dereksantos.bigappsproject.R;
 
 /**
  * Created by SACC on 1/30/17.
@@ -24,8 +27,8 @@ public class ConnectViewHolder extends RecyclerView.ViewHolder {
         return inflater.inflate(R.layout.connect_viewholder, parent, false);
     }
 
-    public void bind(Question question) {
-        titleTextView.setText(question.getTitle());
-        descriptionTextView.setText(question.getDescription());
+    public void bind(Resource resource) {
+        titleTextView.setText(resource.getTitle());
+        descriptionTextView.setText(resource.getDescription());
     }
 }

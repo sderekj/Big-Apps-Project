@@ -1,4 +1,4 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
@@ -6,7 +6,9 @@ import android.view.ViewGroup;
 import java.util.Arrays;
 import java.util.List;
 
+import nyc.c4q.dereksantos.bigappsproject.R;
 import nyc.c4q.dereksantos.bigappsproject.model.CategoryIcon;
+import nyc.c4q.dereksantos.bigappsproject.viewholders.CategoryIconViewHolder;
 
 /**
  * Created by akashaarcher on 1/28/17.

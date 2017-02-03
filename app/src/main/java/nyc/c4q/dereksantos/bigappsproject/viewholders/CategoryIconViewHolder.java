@@ -1,4 +1,4 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.viewholders;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import nyc.c4q.dereksantos.bigappsproject.R;
+import nyc.c4q.dereksantos.bigappsproject.TabActivity;
 import nyc.c4q.dereksantos.bigappsproject.model.CategoryIcon;
 
 /**

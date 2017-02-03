@@ -7,6 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import nyc.c4q.dereksantos.bigappsproject.view.CategoryIconFragment;
+import nyc.c4q.dereksantos.bigappsproject.view.SearchFragment;
+import nyc.c4q.dereksantos.bigappsproject.view.UserProfileFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     CategoryIconFragment iconFragment = new CategoryIconFragment();
