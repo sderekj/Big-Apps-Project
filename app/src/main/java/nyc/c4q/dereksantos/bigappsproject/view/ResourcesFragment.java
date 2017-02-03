@@ -1,4 +1,4 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import nyc.c4q.dereksantos.bigappsproject.R;
+import nyc.c4q.dereksantos.bigappsproject.adapters.TipAdapter;
 import nyc.c4q.dereksantos.bigappsproject.model.TipCard;
 
 /**

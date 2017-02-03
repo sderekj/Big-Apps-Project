@@ -1,4 +1,4 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import nyc.c4q.dereksantos.bigappsproject.R;
+import nyc.c4q.dereksantos.bigappsproject.adapters.ConnectAdapter;
+import nyc.c4q.dereksantos.bigappsproject.model.Resource;
 import nyc.c4q.dereksantos.bigappsproject.network.NycDataClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -57,17 +60,17 @@ public class ConnectFragment extends Fragment {
     }
 
     private void fetchData() {
-        Call<List<Question>> call = nycDataClient.getApiStuff();
-        call.enqueue(new Callback<List<Question>>() {
+        Call<List<Resource>> call = nycDataClient.getApiStuff();
+        call.enqueue(new Callback<List<Resource>>() {
             @Override
-            public void onResponse(Call<List<Question>> call, Response<List<Question>> response) {
-                List<Question> list = response.body();
+            public void onResponse(Call<List<Resource>> call, Response<List<Resource>> response) {
+                List<Resource> list = response.body();
                 RecyclerView.Adapter adapter = new ConnectAdapter(list);
                 recyclerView.setAdapter(adapter);
             }
 
             @Override
-            public void onFailure(Call<List<Question>> call, Throwable t) {
+            public void onFailure(Call<List<Resource>> call, Throwable t) {
 
             }
         });
