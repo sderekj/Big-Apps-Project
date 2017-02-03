@@ -1,10 +1,14 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
+
+import nyc.c4q.dereksantos.bigappsproject.view.ConnectFragment;
+import nyc.c4q.dereksantos.bigappsproject.view.QuestionsFragment;
+import nyc.c4q.dereksantos.bigappsproject.view.ResourcesFragment;
 
 /**
  * Created by shannonalexander-navarro on 1/28/17.

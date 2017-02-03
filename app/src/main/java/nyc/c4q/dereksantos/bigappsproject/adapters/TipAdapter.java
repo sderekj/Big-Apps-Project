@@ -1,4 +1,4 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import nyc.c4q.dereksantos.bigappsproject.R;
 import nyc.c4q.dereksantos.bigappsproject.model.TipCard;
+import nyc.c4q.dereksantos.bigappsproject.viewholders.TipViewHolder;
 
 /**
  * Created by shannonalexander-navarro on 1/29/17.
