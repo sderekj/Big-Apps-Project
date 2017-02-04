@@ -70,6 +70,7 @@ public class ResourcesFragment extends Fragment {
         resourceAdapter = new ResourceAdapter(resourceCards);
         resourceRV.setAdapter(resourceAdapter);
 
+
         return view;
     }
 
