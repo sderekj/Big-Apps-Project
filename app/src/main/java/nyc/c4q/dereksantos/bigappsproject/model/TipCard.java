@@ -5,15 +5,10 @@ package nyc.c4q.dereksantos.bigappsproject.model;
  */
 public class TipCard {
 
-    private String didYou;
     private String factoid;
 
-    public String getDidYou() {
-        return didYou;
-    }
-
-    public void setDidYou(String didYou) {
-        this.didYou = didYou;
+    public TipCard(String tip) {
+        this.factoid = tip;
     }
 
     public String getFactoid() {
