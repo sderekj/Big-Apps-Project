@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="SEARCHING!!!!"/>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/search"
+        android:alpha=".65"/>
+
+
+    <EditText
+        android:id="@+id/search_fill_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_toRightOf="@id/search_icon"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:layout_width="340dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:background="#D8D8D8"
+        android:layout_below="@id/search_icon"/>
+
+</RelativeLayout>
