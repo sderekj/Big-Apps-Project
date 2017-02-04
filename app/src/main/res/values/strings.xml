@@ -7,4 +7,7 @@
     <string name="nav_search">Search</string>
     <string name="nav_profile">Profile</string>
     <string name="tip_title">Did you know...?</string>
+    <string name="answer_hint">Answer question here.</string>
+    <string name="submit">Submit</string>
+    <string name="title_activity_answer">AnswerActivity</string>
 </resources>
