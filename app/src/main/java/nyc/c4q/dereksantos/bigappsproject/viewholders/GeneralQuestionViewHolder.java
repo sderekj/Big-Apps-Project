@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import nyc.c4q.dereksantos.bigappsproject.AnswerActivity;
+import nyc.c4q.dereksantos.bigappsproject.QuestionListActivity;
 import nyc.c4q.dereksantos.bigappsproject.R;
 import nyc.c4q.dereksantos.bigappsproject.model.Question;
 
@@ -44,7 +45,7 @@ public class GeneralQuestionViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(context, AnswerActivity.class);
+                Intent intent = new Intent(context, QuestionListActivity.class);
                 //TODO: The putExtra should take a question from a db perhaps
                // intent.putExtra("this question", generalQuestion.getTitle());
                 context.startActivity(intent);
