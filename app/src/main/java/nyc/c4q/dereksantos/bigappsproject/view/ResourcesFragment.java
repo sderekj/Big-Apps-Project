@@ -50,13 +50,14 @@ public class ResourcesFragment extends Fragment {
         super.onCreate(savedInstanceState);
         page = getArguments().getInt(INT_TAG, 0);
         title = getArguments().getString(TITLE_TAG);
+        addTips();
+
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.resource_fragment, container, false);
-        tipCards.add(new TipCard());
         tipRV = (RecyclerView) view.findViewById(R.id.tip_rv);
         tipRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         tipAdapter = new TipAdapter(tipCards);
@@ -71,5 +72,21 @@ public class ResourcesFragment extends Fragment {
 
 
         return view;
+    }
+
+    //    Get a subway app for your phone
+//    https://play.google.com/store/apps/details?id=com.thetransitapp.droid&hl=en
+//    The Staten Island Ferry is free!
+//    On an escalator, stand on the right, walk on the left
+//    Half priced metro cards are available for Senior Citizens (age 65 and older) and customers with qualifying disabilities
+//    Appointments are required for ID NYC cards.
+//            http://www1.nyc.gov/site/idnyc/card/make-an-appointment.page
+//            1 Comment Collapse
+//    Tip list
+    private void addTips() {
+        tipCards.add(new TipCard("the Staten Island Ferry is free! And you can get a great view of the Statue of Liberty from it."));
+        tipCards.add(new TipCard("the cost of a fare for public transportation is $2.75, with that you get 1 free transfer good for 2hours"));
+        tipCards.add(new TipCard("children under 44\" ride free on public transportation" ));
+        tipCards.add(new TipCard("half priced metro cards are available for Senior Citizens (age 65 or older) and those with qualifying disabilities"));
     }
 }
