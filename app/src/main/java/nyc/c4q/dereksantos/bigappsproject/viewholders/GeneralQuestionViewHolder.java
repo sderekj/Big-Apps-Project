@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import nyc.c4q.dereksantos.bigappsproject.AnswerActivity;
-import nyc.c4q.dereksantos.bigappsproject.QuestionListActivity;
+import nyc.c4q.dereksantos.bigappsproject.AnsweredQuestionListActivity;
+import nyc.c4q.dereksantos.bigappsproject.UnansweredQuestionListActivity;
 import nyc.c4q.dereksantos.bigappsproject.R;
 import nyc.c4q.dereksantos.bigappsproject.model.Question;
 
@@ -44,8 +44,13 @@ public class GeneralQuestionViewHolder extends RecyclerView.ViewHolder {
         descriptionTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent;
+                if (titleTextView.getText().equals("Recently Answered Questions")) {
+                    intent = new Intent(context, AnsweredQuestionListActivity.class);
+                } else {
+                    intent = new Intent(context, UnansweredQuestionListActivity.class);
+                }
 
-                Intent intent = new Intent(context, QuestionListActivity.class);
                 //TODO: The putExtra should take a question from a db perhaps
                // intent.putExtra("this question", generalQuestion.getTitle());
                 context.startActivity(intent);
