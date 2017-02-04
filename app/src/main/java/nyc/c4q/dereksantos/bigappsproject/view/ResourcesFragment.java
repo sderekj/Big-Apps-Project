@@ -14,7 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nyc.c4q.dereksantos.bigappsproject.R;
+import nyc.c4q.dereksantos.bigappsproject.adapters.ResourceAdapter;
 import nyc.c4q.dereksantos.bigappsproject.adapters.TipAdapter;
+import nyc.c4q.dereksantos.bigappsproject.model.ResourceCard;
 import nyc.c4q.dereksantos.bigappsproject.model.TipCard;
 
 /**
@@ -30,6 +32,9 @@ public class ResourcesFragment extends Fragment {
     private TipAdapter tipAdapter;
     List<TipCard> tipCards = new ArrayList<>();
     private CardView cardView;
+    private RecyclerView resourceRV;
+    private ResourceAdapter resourceAdapter;
+    List<ResourceCard> resourceCards = new ArrayList<>();
 
     public static Fragment newInstance(int page, String title) {
         ResourcesFragment resourcesFrag = new ResourcesFragment();
@@ -58,6 +63,12 @@ public class ResourcesFragment extends Fragment {
         tipRV.setAdapter(tipAdapter);
         cardView = (CardView) view.findViewById(R.id.tip_card);
         cardView.setPreventCornerOverlap(false);
+
+        resourceRV = (RecyclerView) view.findViewById(R.id.resource_rv);
+        resourceRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        resourceAdapter = new ResourceAdapter(resourceCards);
+        resourceRV.setAdapter(resourceAdapter);
+
         return view;
     }
 }
