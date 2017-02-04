@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,8 @@ public class SearchFragment extends Fragment {
         searchBox = (EditText) view.findViewById(R.id.search_fill_text);
         searchBox.setHint("Search");
         searchBox.setTextColor(Color.parseColor("#B8B8B8"));
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Search");
 
         return view;
     }
