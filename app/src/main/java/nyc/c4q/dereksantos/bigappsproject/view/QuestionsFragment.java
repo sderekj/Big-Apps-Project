@@ -13,7 +13,7 @@ import java.util.List;
 
 import nyc.c4q.dereksantos.bigappsproject.R;
 import nyc.c4q.dereksantos.bigappsproject.adapters.QuestionsAdapter;
-import nyc.c4q.dereksantos.bigappsproject.model.Resource;
+import nyc.c4q.dereksantos.bigappsproject.model.FarmerMarket;
 import nyc.c4q.dereksantos.bigappsproject.network.NycDataClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,17 +61,17 @@ public class QuestionsFragment extends Fragment {
     }
 
     private void fetchData() {
-        Call<List<Resource>> call = nycDataClient.getApiStuff();
-        call.enqueue(new Callback<List<Resource>>() {
+        Call<List<FarmerMarket>> call = nycDataClient.getFoodAndNutritionData();
+        call.enqueue(new Callback<List<FarmerMarket>>() {
             @Override
-            public void onResponse(Call<List<Resource>> call, Response<List<Resource>> response) {
-                List<Resource> list = response.body();
+            public void onResponse(Call<List<FarmerMarket>> call, Response<List<FarmerMarket>> response) {
+                List<FarmerMarket> list = response.body();
 //                RecyclerView.Adapter adapter = new QuestionsAdapter(list);
 //                recyclerView.setAdapter(adapter);
             }
 
             @Override
-            public void onFailure(Call<List<Resource>> call, Throwable t) {
+            public void onFailure(Call<List<FarmerMarket>> call, Throwable t) {
 
             }
         });

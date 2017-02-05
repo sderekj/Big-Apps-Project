@@ -9,11 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import nyc.c4q.dereksantos.bigappsproject.R;
+import nyc.c4q.dereksantos.bigappsproject.TabActivity;
 import nyc.c4q.dereksantos.bigappsproject.adapters.ConnectAdapter;
-import nyc.c4q.dereksantos.bigappsproject.model.Resource;
+import nyc.c4q.dereksantos.bigappsproject.model.ApiResponse;
+import nyc.c4q.dereksantos.bigappsproject.model.FarmerMarket;
+import nyc.c4q.dereksantos.bigappsproject.model.FluVaccineLocation;
+import nyc.c4q.dereksantos.bigappsproject.model.LegalFacility;
 import nyc.c4q.dereksantos.bigappsproject.network.NycDataClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -56,24 +61,66 @@ public class ConnectFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.connect_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        fetchData();
+        String iconClicked = TabActivity.getIconClicked();
+        fetchData(iconClicked);
+
         return view;
     }
 
-    private void fetchData() {
-        Call<List<Resource>> call = nycDataClient.getApiStuff();
-        call.enqueue(new Callback<List<Resource>>() {
-            @Override
-            public void onResponse(Call<List<Resource>> call, Response<List<Resource>> response) {
-                List<Resource> list = response.body();
-                RecyclerView.Adapter adapter = new ConnectAdapter(list);
-                recyclerView.setAdapter(adapter);
-            }
+    private void fetchData(String iconClicked) {
+        switch (iconClicked) {
+            case "Food & Nutrition":
+                Call<List<FarmerMarket>> call1 = nycDataClient.getFoodAndNutritionData();
+                call1.enqueue(new Callback<List<FarmerMarket>>() {
+                    @Override
+                    public void onResponse(Call<List<FarmerMarket>> call, Response<List<FarmerMarket>> response) {
+                        List<ApiResponse> list = new ArrayList<>();
+                        list.addAll(response.body());
+                        RecyclerView.Adapter adapter = new ConnectAdapter(list);
+                        recyclerView.setAdapter(adapter);
+                    }
 
-            @Override
-            public void onFailure(Call<List<Resource>> call, Throwable t) {
+                    @Override
+                    public void onFailure(Call<List<FarmerMarket>> call, Throwable t) {
 
-            }
-        });
+                    }
+                });
+                break;
+            case "Legal Help":
+                Call<List<LegalFacility>> call2 = nycDataClient.getLegalData();
+                call2.enqueue(new Callback<List<LegalFacility>>() {
+                    @Override
+                    public void onResponse(Call<List<LegalFacility>> call, Response<List<LegalFacility>> response) {
+                        List<ApiResponse> list = new ArrayList<>();
+                        list.addAll(response.body());
+                        RecyclerView.Adapter adapter = new ConnectAdapter(list);
+                        recyclerView.setAdapter(adapter);
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<LegalFacility>> call, Throwable t) {
+
+                    }
+                });
+                break;
+            case "Healthcare":
+                Call<List<FluVaccineLocation>> call3 = nycDataClient.getVaccineLocationData();
+                call3.enqueue(new Callback<List<FluVaccineLocation>>() {
+                    @Override
+                    public void onResponse(Call<List<FluVaccineLocation>> call, Response<List<FluVaccineLocation>> response) {
+                        List<ApiResponse> list = new ArrayList<>();
+                        list.addAll(response.body());
+                        RecyclerView.Adapter adapter = new ConnectAdapter(list);
+                        recyclerView.setAdapter(adapter);
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<FluVaccineLocation>> call, Throwable t) {
+
+                    }
+                });
+                break;
+        }
     }
+
 }

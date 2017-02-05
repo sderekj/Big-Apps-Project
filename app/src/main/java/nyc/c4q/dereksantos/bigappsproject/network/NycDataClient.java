@@ -2,7 +2,9 @@ package nyc.c4q.dereksantos.bigappsproject.network;
 
 import java.util.List;
 
-import nyc.c4q.dereksantos.bigappsproject.model.Resource;
+import nyc.c4q.dereksantos.bigappsproject.model.FarmerMarket;
+import nyc.c4q.dereksantos.bigappsproject.model.FluVaccineLocation;
+import nyc.c4q.dereksantos.bigappsproject.model.LegalFacility;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -34,7 +36,16 @@ public class NycDataClient {
         api = retrofit.create(NycDataApi.class);
     }
 
-    public Call<List<Resource>> getApiStuff() {
-        return api.getData2();
+    public Call<List<FarmerMarket>> getFoodAndNutritionData() {
+        return api.getFoodAndNutritionData();
     }
+
+    public Call<List<FluVaccineLocation>> getVaccineLocationData() {
+        return api.getVaccineLocationData();
+    }
+
+    public Call<List<LegalFacility>> getLegalData() {
+        return api.getLegalData();
+    }
+
 }

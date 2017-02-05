@@ -37,7 +37,7 @@ public class CategoryIconViewHolder extends RecyclerView.ViewHolder {
         return inflater.inflate(R.layout.icon_layout, parent, false);
     }
 
-    public void bind(CategoryIcon icon) {
+    public void bind(final CategoryIcon icon) {
         iconName.setText(icon.getTitle());
         Integer resource = icon.getImageResource();
         Picasso.with(view.getContext())
@@ -49,15 +49,10 @@ public class CategoryIconViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), TabActivity.class);
+                intent.putExtra("ICON_TITLE", icon.getTitle());
                 view.getContext().startActivity(intent);
             }
         });
     }
-
-//
-//    public void setOnClickListener(View.OnClickListener clickListener) {
-//        view.setOnClickListener(clickListener);
-//    }
-
 
 }

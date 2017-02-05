@@ -20,9 +20,9 @@ public class QuestionsAdapter extends RecyclerView.Adapter {
     private final int ASKQUESTION = 0, GENERALQUESTION = 1;
 
     List<Question> questionList = Arrays.asList(
-            new AskQuestion("Ask a Question", "This is where you should ask the question!"),
-            new GeneralQuestion("Recently Answered Questions", "These are the recently answered questions."),
-            new GeneralQuestion("Unanswered Questions", "Recent questions asked by other New Yorkers.")
+            new AskQuestion("Ask a Question", "Tap to ask your question."),
+            new GeneralQuestion("Recently Answered Questions", "Questions recently answered by other New Yorkers."),
+            new GeneralQuestion("Unanswered Questions", "Questions recently asked by other New Yorkers.")
     );
 
     @Override
