@@ -27,12 +27,10 @@ public class CategoryIconAdapter extends RecyclerView.Adapter  {
             new CategoryIcon(R.drawable.transport, "Transportation")
     );
 
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new CategoryIconViewHolder(parent);
     }
-
 
 
     @Override
@@ -42,32 +40,6 @@ public class CategoryIconAdapter extends RecyclerView.Adapter  {
         iconViewHolder.bind(iconList);
     }
 
-//    private View.OnClickListener buildThumbnailClickListener(Picture thumbnail) {
-//        if (thumbnail != null) {
-//            return navigateToThumbnailViewListener(thumbnail.getDesignerName());
-//        }
-//        return defaultClickListener();
-//    }
-//
-//    private View.OnClickListener navigateToThumbnailViewListener(final String designerName) {
-//        return new View.OnClickListener(){
-//            @Override
-//            public void onClick (View view) {
-//                Intent intent = new Intent(view.getContext(), DetailsTab.class);
-//                intent.putExtra(DetailView.COSTUME_NAME, designerName);
-//                view.getContext().startActivity(intent);
-//            }
-//        };
-//    }
-//
-//    private View.OnClickListener defaultClickListener() {
-//        return new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // Do Nothing
-//            }
-//        };
-//    }
 
     @Override
     public int getItemCount() {

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
 import nyc.c4q.dereksantos.bigappsproject.AnsweredQuestionListActivity;
 import nyc.c4q.dereksantos.bigappsproject.UnansweredQuestionListActivity;
 import nyc.c4q.dereksantos.bigappsproject.R;
@@ -40,8 +41,8 @@ public class GeneralQuestionViewHolder extends RecyclerView.ViewHolder {
     public void bind(final Question generalQuestion) {
 
         titleTextView.setText(generalQuestion.getTitle());
-        descriptionTextView.setText(generalQuestion.getDescription());
-        descriptionTextView.setOnClickListener(new View.OnClickListener() {
+       // descriptionTextView.setText(generalQuestion.getDescription());
+        titleTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent;
@@ -51,6 +52,8 @@ public class GeneralQuestionViewHolder extends RecyclerView.ViewHolder {
                     intent = new Intent(context, UnansweredQuestionListActivity.class);
                 }
 
+                //TODO: The putExtra should take a question from a db perhaps
+               // intent.putExtra("this question", generalQuestion.getTitle());
                 context.startActivity(intent);
 //                Fragment answerFragment = new AnswerFragment();
 //                FragmentManager answerManager = ((FragmentActivity) view.getContext()).getSupportFragmentManager();

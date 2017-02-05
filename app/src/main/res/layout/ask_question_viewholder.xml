@@ -2,12 +2,12 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
-    android:layout_marginBottom="2dp"
-    android:layout_marginTop="2dp"
+    android:layout_height="160dp"
+    android:layout_marginBottom="15dp"
+    android:layout_marginTop="16dp"
     android:clickable="true"
     android:foreground="?selectableItemBackground"
-    app:cardBackgroundColor="#8bc34a"
+    app:cardBackgroundColor="#F0F0F0"
     app:cardCornerRadius="2dp"
     app:cardElevation="2dp">
 
@@ -22,16 +22,35 @@
             android:layout_height="40dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:padding="4dp"
-            android:text=""
-            android:textSize="24sp" />
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:text="Ask a Question"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/question_input"
+            android:layout_width="365dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="#D8D8D8"
+            android:inputType="textMultiLine"
+            android:text="here is some placeholder text. Hold me."
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SUBMIT"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/question_description_tv"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:padding="4dp"
-            android:text=""
+            android:text="This is where you ask a question"
             android:textSize="16sp" />
 
     </LinearLayout>
