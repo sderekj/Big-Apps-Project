@@ -35,7 +35,8 @@
             android:background="#D8D8D8"
             android:inputType="textMultiLine"
             android:paddingTop="4dp"
-            android:text="here is some placeholder text. Hold me."
+            android:paddingLeft="8dp"
+            android:hint="Here is some placeholder text. Hold me."
             android:textSize="14sp" />
 
         <Button
@@ -44,10 +45,10 @@
             android:layout_height="36dp"
             android:layout_gravity="center"
             android:layout_marginTop="12dp"
-            android:text="SUBMIT"
-            android:textScaleX="1.3"
-            android:textColor="@color/icons"
             android:background="@color/primary"
+            android:text="SUBMIT"
+            android:textColor="@color/icons"
+            android:textScaleX="1.3"
             android:textSize="13sp" />
 
         <TextView

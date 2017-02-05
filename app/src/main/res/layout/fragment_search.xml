@@ -30,7 +30,7 @@
         android:layout_height="1dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10sp"
-        android:background="#D8D8D8"
+        android:background="@color/divider"
         android:layout_below="@id/search_icon"/>
 
 </RelativeLayout>
