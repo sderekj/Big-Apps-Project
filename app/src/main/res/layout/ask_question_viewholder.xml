@@ -2,9 +2,9 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="180dp"
     android:layout_marginBottom="15dp"
-    android:layout_marginTop="16dp"
+    android:layout_marginTop="2dp"
     android:clickable="true"
     android:foreground="?selectableItemBackground"
     app:cardBackgroundColor="#F0F0F0"
@@ -22,8 +22,8 @@
             android:layout_height="40dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:paddingLeft="4dp"
-            android:paddingTop="4dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="14dp"
             android:text="Ask a Question"
             android:textSize="20sp" />
 
@@ -34,21 +34,26 @@
             android:layout_gravity="center"
             android:background="#D8D8D8"
             android:inputType="textMultiLine"
+            android:paddingTop="4dp"
             android:text="here is some placeholder text. Hold me."
             android:textSize="14sp" />
 
         <Button
             android:id="@+id/submit_btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:layout_gravity="center"
+            android:layout_marginTop="12dp"
             android:text="SUBMIT"
-            android:textSize="12sp" />
+            android:textScaleX="1.3"
+            android:textColor="@color/icons"
+            android:background="@color/primary"
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/question_description_tv"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="1dp"
             android:padding="4dp"
             android:text="This is where you ask a question"
             android:textSize="16sp" />

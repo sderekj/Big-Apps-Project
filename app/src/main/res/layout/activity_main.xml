@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="0dp"
+    android:background="@color/grayBackground"
     tools:context="nyc.c4q.dereksantos.bigappsproject.MainActivity">
 
     <FrameLayout
@@ -23,7 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="bottom"
-        app:itemBackground="?attr/colorAccent"
+        app:itemTextColor="@color/divider"
+        app:itemIconTint="@color/icons"
+        app:itemBackground="@color/primary_light"
         app:menu="@menu/bottom_navigation" />
 </LinearLayout>
 
