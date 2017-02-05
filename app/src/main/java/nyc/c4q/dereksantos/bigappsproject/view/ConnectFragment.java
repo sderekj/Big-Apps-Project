@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,7 @@ public class ConnectFragment extends Fragment {
     private static final String TITLE_TAG = "cFrag";
     private RecyclerView recyclerView;
     private NycDataClient nycDataClient;
+    private TextView connectHeaderTextView;
 
     public static Fragment newInstance(int page, String title) {
         ConnectFragment connectFrag = new ConnectFragment();
@@ -56,15 +58,31 @@ public class ConnectFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.connect_fragment,container,false);
+        View view = inflater.inflate(R.layout.connect_fragment, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.connect_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        connectHeaderTextView = (TextView) view.findViewById(R.id.connect_header_tv);
 
         String iconClicked = TabActivity.getIconClicked();
         fetchData(iconClicked);
+        setHeaderText(iconClicked);
 
         return view;
+    }
+
+    private void setHeaderText(String iconClicked) {
+        switch (iconClicked) {
+            case "Food & Nutrition":
+                connectHeaderTextView.setText("Connect with Local Farmers' Markets");
+                break;
+            case "Legal Help":
+                connectHeaderTextView.setText("Connect with Local Legal Services");
+                break;
+            case "Healthcare":
+                connectHeaderTextView.setText("Connect with Local Healthcare Facilities");
+                break;
+        }
     }
 
     private void fetchData(String iconClicked) {

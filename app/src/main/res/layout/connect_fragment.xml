@@ -7,6 +7,14 @@
     android:paddingLeft="8dp"
     android:paddingRight="8dp">
 
+    <TextView
+        android:id="@+id/connect_header_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textSize="24sp" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/connect_rv"
         android:layout_width="match_parent"
