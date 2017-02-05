@@ -33,8 +33,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/available_resources"
         android:textAllCaps="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="24dp"
         android:textColor="@color/primary"
         android:textSize="20dp" />
 
