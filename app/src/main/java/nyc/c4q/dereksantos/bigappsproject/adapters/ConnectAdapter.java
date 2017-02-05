@@ -6,16 +6,17 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import nyc.c4q.dereksantos.bigappsproject.model.Resource;
+import nyc.c4q.dereksantos.bigappsproject.model.ApiResponse;
+import nyc.c4q.dereksantos.bigappsproject.model.FarmerMarket;
 import nyc.c4q.dereksantos.bigappsproject.viewholders.ConnectViewHolder;
 
 /**
  * Created by SACC on 1/30/17.
  */
 public class ConnectAdapter extends RecyclerView.Adapter<ConnectViewHolder> {
-    private List<Resource> connectList = new ArrayList<>();
+    private List<ApiResponse> connectList = new ArrayList<>();
 
-    public ConnectAdapter(List<Resource> list) {
+    public ConnectAdapter(List<ApiResponse> list) {
         this.connectList = list;
     }
 
@@ -26,8 +27,8 @@ public class ConnectAdapter extends RecyclerView.Adapter<ConnectViewHolder> {
 
     @Override
     public void onBindViewHolder(ConnectViewHolder holder, int position) {
-        Resource resource = connectList.get(position);
-        holder.bind(resource);
+        ApiResponse apiResponse = connectList.get(position);
+        holder.bind(apiResponse);
     }
 
     @Override

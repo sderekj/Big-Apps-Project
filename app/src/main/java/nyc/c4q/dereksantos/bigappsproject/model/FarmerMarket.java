@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by SACC on 1/29/17.
  */
 
-public class Resource {
+public class FarmerMarket implements ApiResponse {
 
     @SerializedName("facilityname")
     private String title;
@@ -14,7 +14,7 @@ public class Resource {
     @SerializedName("facilitystreetname")
     private String description;
 
-    public Resource(String title, String description) {
+    public FarmerMarket(String title, String description) {
         this.title = title;
         this.description = description;
     }

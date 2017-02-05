@@ -32,7 +32,6 @@ public class CategoryIconAdapter extends RecyclerView.Adapter  {
         return new CategoryIconViewHolder(parent);
     }
 
-
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         CategoryIconViewHolder iconViewHolder = (CategoryIconViewHolder) holder;
@@ -40,12 +39,9 @@ public class CategoryIconAdapter extends RecyclerView.Adapter  {
         iconViewHolder.bind(iconList);
     }
 
-
     @Override
     public int getItemCount() {
         return icons.size();
     }
-
-
 
 }

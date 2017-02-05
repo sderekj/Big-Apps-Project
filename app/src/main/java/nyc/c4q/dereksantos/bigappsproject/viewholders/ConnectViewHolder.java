@@ -6,7 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import nyc.c4q.dereksantos.bigappsproject.model.Resource;
+import nyc.c4q.dereksantos.bigappsproject.model.ApiResponse;
+import nyc.c4q.dereksantos.bigappsproject.model.FarmerMarket;
 import nyc.c4q.dereksantos.bigappsproject.R;
 
 /**
@@ -27,8 +28,8 @@ public class ConnectViewHolder extends RecyclerView.ViewHolder {
         return inflater.inflate(R.layout.connect_viewholder, parent, false);
     }
 
-    public void bind(Resource resource) {
-        titleTextView.setText(resource.getTitle());
-        descriptionTextView.setText(resource.getDescription());
+    public void bind(ApiResponse apiResponse) {
+        titleTextView.setText(apiResponse.getTitle());
+        descriptionTextView.setText(apiResponse.getDescription());
     }
 }
