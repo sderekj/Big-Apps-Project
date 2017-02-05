@@ -10,6 +10,13 @@ public class ResourceCard {
     private String resourcePhone;
     private String resourceAddress;
 
+    public ResourceCard(String resourceTitle, String resourceDescription, String resourcePhone, String resourceAddress) {
+        this.resourceTitle = resourceTitle;
+        this.resourceDescription = resourceDescription;
+        this.resourcePhone = resourcePhone;
+        this.resourceAddress = resourceAddress;
+    }
+
     public String getResourceTitle() {
         return resourceTitle;
     }
