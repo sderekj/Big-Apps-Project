@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="260dp"
     android:layout_marginBottom="15dp"
     android:layout_marginTop="2dp"
     android:clickable="true"
@@ -29,15 +29,29 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/question_input"
+            android:id="@+id/question_title_input"
             android:layout_width="365dp"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="#D8D8D8"
-            android:inputType="textMultiLine"
-            android:paddingTop="4dp"
+            android:ellipsize="end"
+            android:hint="Question Title"
+            android:inputType="textAutoCorrect"
+            android:maxLines="1"
             android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/question_input"
+            android:layout_width="365dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:background="#D8D8D8"
             android:hint="Here is some placeholder text. Hold me."
+            android:inputType="textMultiLine"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
             android:textSize="14sp" />
 
         <Button
@@ -51,14 +65,6 @@
             android:textColor="@color/icons"
             android:textScaleX="1.3"
             android:textSize="13sp" />
-
-        <TextView
-            android:id="@+id/question_description_tv"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:padding="4dp"
-            android:text="This is where you ask a question"
-            android:textSize="16sp" />
 
     </LinearLayout>
 </android.support.v7.widget.CardView>
