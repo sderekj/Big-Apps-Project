@@ -12,4 +12,5 @@
     <string name="title_activity_answer">AnswerActivity</string>
     <string name="address_website">Address/Website:</string>
     <string name="phone_number">Phone Number:</string>
+    <string name="available_resources">Available Resources</string>
 </resources>

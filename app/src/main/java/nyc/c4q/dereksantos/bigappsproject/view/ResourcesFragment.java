@@ -71,19 +71,9 @@ public class ResourcesFragment extends Fragment {
         resourceAdapter = new ResourceAdapter(resourceCards);
         resourceRV.setAdapter(resourceAdapter);
 
-
         return view;
     }
 
-    //    Get a subway app for your phone
-//    https://play.google.com/store/apps/details?id=com.thetransitapp.droid&hl=en
-//    The Staten Island Ferry is free!
-//    On an escalator, stand on the right, walk on the left
-//    Half priced metro cards are available for Senior Citizens (age 65 and older) and customers with qualifying disabilities
-//    Appointments are required for ID NYC cards.
-//            http://www1.nyc.gov/site/idnyc/card/make-an-appointment.page
-//            1 Comment Collapse
-//    Tip list
     private void addTips() {
         tipCards.add(new TipCard("the Staten Island Ferry is free! And you can get a great view of the Statue of Liberty from it."));
         tipCards.add(new TipCard("the cost of a fare for public transportation is $2.75, with that you get 1 free transfer good for 2hours"));
