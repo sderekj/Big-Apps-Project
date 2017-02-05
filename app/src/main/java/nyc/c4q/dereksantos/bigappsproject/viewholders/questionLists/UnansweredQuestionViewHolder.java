@@ -17,6 +17,8 @@ import nyc.c4q.dereksantos.bigappsproject.model.Question;
 public class UnansweredQuestionViewHolder extends RecyclerView.ViewHolder {
     private final TextView titleView;
     private final TextView descriptionView;
+    private static final String TITLE_EXTRA = "this question title";
+    private static final String DESCRIPTION_EXTRA = "this question description";
 
     public UnansweredQuestionViewHolder(ViewGroup parent) {
         super(inflateView(parent));
@@ -29,13 +31,15 @@ public class UnansweredQuestionViewHolder extends RecyclerView.ViewHolder {
         return inflater.inflate(R.layout.question_viewholder, parent, false);
     }
 
-    public void bind(Question question) {
+    public void bind(final Question question) {
         titleView.setText(question.getTitle());
         descriptionView.setText(question.getDescription());
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(itemView.getContext(), AnswerActivity.class);
+                intent.putExtra(TITLE_EXTRA, question.getTitle());
+                intent.putExtra(DESCRIPTION_EXTRA, question.getDescription());
                 itemView.getContext().startActivity(intent);
             }
         });
