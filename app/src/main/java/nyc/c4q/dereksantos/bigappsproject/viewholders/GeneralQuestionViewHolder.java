@@ -51,8 +51,6 @@ public class GeneralQuestionViewHolder extends RecyclerView.ViewHolder {
                     intent = new Intent(context, UnansweredQuestionListActivity.class);
                 }
 
-                //TODO: The putExtra should take a question from a db perhaps
-               // intent.putExtra("this question", generalQuestion.getTitle());
                 context.startActivity(intent);
 //                Fragment answerFragment = new AnswerFragment();
 //                FragmentManager answerManager = ((FragmentActivity) view.getContext()).getSupportFragmentManager();

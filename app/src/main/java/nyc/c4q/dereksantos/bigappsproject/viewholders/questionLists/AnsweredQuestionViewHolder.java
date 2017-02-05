@@ -15,6 +15,8 @@ import nyc.c4q.dereksantos.bigappsproject.model.Question;
  * Created by SACC on 2/4/17.
  */
 public class AnsweredQuestionViewHolder extends RecyclerView.ViewHolder {
+    private static final String TITLE_EXTRA = "title extra";
+    private static final String DESCRIPTION_EXTRA = "description extra";
     private final TextView titleView;
     private final TextView descriptionView;
 
@@ -29,14 +31,17 @@ public class AnsweredQuestionViewHolder extends RecyclerView.ViewHolder {
         return inflater.inflate(R.layout.question_viewholder, parent, false);
     }
 
-    public void bind(Question question) {
+    public void bind(final Question question) {
         titleView.setText(question.getTitle());
         descriptionView.setText(question.getDescription());
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(itemView.getContext(), AnswerActivity.class);
+                intent.putExtra(TITLE_EXTRA, question.getTitle());
+                intent.putExtra(DESCRIPTION_EXTRA, question.getDescription());
                 itemView.getContext().startActivity(intent);
             }
         });
+
     }}
