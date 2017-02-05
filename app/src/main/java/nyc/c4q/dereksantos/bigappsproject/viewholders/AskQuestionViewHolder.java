@@ -1,13 +1,11 @@
 package nyc.c4q.dereksantos.bigappsproject.viewholders;
 
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import nyc.c4q.dereksantos.bigappsproject.R;
 import nyc.c4q.dereksantos.bigappsproject.model.Question;
@@ -39,17 +37,5 @@ public class AskQuestionViewHolder extends RecyclerView.ViewHolder {
 
     public void bind(Question question) {
         titleTextView.setText(question.getTitle());
-        // descriptionTextView.setText(question.getDescription());
-       itemView.setOnClickListener(new View.OnClickListener() {
-         @Override
-            public void onClick(View view) {
-//
-//                Intent intent = new Intent(itemView.getContext(), QuestionListActivity.class);
-//                itemView.getContext().startActivity(intent);
-
-                Toast.makeText(itemView.getContext(), "Supper Dupper?", Toast.LENGTH_SHORT).show();
-            }
-        });
-      //  descriptionTextView.setText(question.getDescription());
     }
 }
