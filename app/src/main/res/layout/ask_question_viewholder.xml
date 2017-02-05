@@ -25,6 +25,7 @@
             android:paddingLeft="16dp"
             android:paddingTop="14dp"
             android:text="Ask a Question"
+            android:textColor="@color/primary_text"
             android:textSize="20sp" />
 
         <EditText
