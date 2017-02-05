@@ -10,4 +10,6 @@
     <string name="answer_hint">Answer question here.</string>
     <string name="submit">Submit</string>
     <string name="title_activity_answer">AnswerActivity</string>
+    <string name="address_website">Address/Website:</string>
+    <string name="phone_number">Phone Number:</string>
 </resources>

@@ -51,6 +51,7 @@ public class ResourcesFragment extends Fragment {
         page = getArguments().getInt(INT_TAG, 0);
         title = getArguments().getString(TITLE_TAG);
         addTips();
+        addResources();
 
     }
 
@@ -88,5 +89,28 @@ public class ResourcesFragment extends Fragment {
         tipCards.add(new TipCard("the cost of a fare for public transportation is $2.75, with that you get 1 free transfer good for 2hours"));
         tipCards.add(new TipCard("children under 44\" ride free on public transportation" ));
         tipCards.add(new TipCard("half priced metro cards are available for Senior Citizens (age 65 or older) and those with qualifying disabilities"));
+    }
+
+    private void addResources(){
+        resourceCards.add(new ResourceCard(
+                "ID NYC",
+                "Free, government issued IDs for New Yorkers age 14 and up regardless of immigration status." +
+                        "See website on how to make an appointment.",
+                "N/A",
+                "http://www1.nyc.gov/site/idnyc/card/make-an-appointment.page"
+        ));
+
+        resourceCards.add(new ResourceCard(
+                "NYC School Calendar",
+                "Keep up to date with your child's school schedule, including upcoming vacation days",
+                "N/A",
+                "http://schools.nyc.gov/Calendar/default.htm"
+        ));
+        resourceCards.add(new ResourceCard(
+                "MTA Trip Planner",
+                "Use the MTA's trip planner to help figure out how to get where you need to go.",
+                "N/A",
+                "http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx"
+        ));
     }
 }
