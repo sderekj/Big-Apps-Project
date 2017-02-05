@@ -9,7 +9,6 @@ import java.util.List;
 import nyc.c4q.dereksantos.bigappsproject.model.AskQuestion;
 import nyc.c4q.dereksantos.bigappsproject.model.GeneralQuestion;
 import nyc.c4q.dereksantos.bigappsproject.model.Question;
-import nyc.c4q.dereksantos.bigappsproject.model.Resource;
 import nyc.c4q.dereksantos.bigappsproject.viewholders.AskQuestionViewHolder;
 import nyc.c4q.dereksantos.bigappsproject.viewholders.GeneralQuestionViewHolder;
 

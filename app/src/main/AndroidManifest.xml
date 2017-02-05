@@ -18,10 +18,15 @@
         </activity>
         <activity android:name=".AnswerActivity" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".TabActivity" />
-        <activity android:name=".QuestionListActivity" />
+        <activity android:name=".UnansweredQuestionListActivity" />
+        <activity android:name=".AnsweredQuestionListActivity" />
     </application>
 </manifest>
 

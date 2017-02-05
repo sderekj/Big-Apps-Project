@@ -9,9 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import nyc.c4q.dereksantos.bigappsproject.QuestionListActivity;
 import nyc.c4q.dereksantos.bigappsproject.R;
 import nyc.c4q.dereksantos.bigappsproject.model.Question;
+
 
 /**
  * Created by SACC on 1/29/17.
@@ -43,12 +43,13 @@ public class AskQuestionViewHolder extends RecyclerView.ViewHolder {
        itemView.setOnClickListener(new View.OnClickListener() {
          @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(itemView.getContext(), QuestionListActivity.class);
-                itemView.getContext().startActivity(intent);
+//
+//                Intent intent = new Intent(itemView.getContext(), QuestionListActivity.class);
+//                itemView.getContext().startActivity(intent);
 
                 Toast.makeText(itemView.getContext(), "Supper Dupper?", Toast.LENGTH_SHORT).show();
             }
         });
+      //  descriptionTextView.setText(question.getDescription());
     }
 }

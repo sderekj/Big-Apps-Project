@@ -1,4 +1,4 @@
-package nyc.c4q.dereksantos.bigappsproject;
+package nyc.c4q.dereksantos.bigappsproject.viewholders.questionLists;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -7,16 +7,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import nyc.c4q.dereksantos.bigappsproject.AnswerActivity;
+import nyc.c4q.dereksantos.bigappsproject.R;
 import nyc.c4q.dereksantos.bigappsproject.model.Question;
 
 /**
  * Created by SACC on 2/4/17.
  */
-public class QuestionViewHolder extends RecyclerView.ViewHolder {
+public class UnansweredQuestionViewHolder extends RecyclerView.ViewHolder {
     private final TextView titleView;
     private final TextView descriptionView;
+    private static final String TITLE_EXTRA = "this question title";
+    private static final String DESCRIPTION_EXTRA = "this question description";
 
-    public QuestionViewHolder(ViewGroup parent) {
+    public UnansweredQuestionViewHolder(ViewGroup parent) {
         super(inflateView(parent));
         titleView = (TextView) itemView.findViewById(R.id.question_title);
         descriptionView = (TextView) itemView.findViewById(R.id.question_description);
@@ -27,13 +31,15 @@ public class QuestionViewHolder extends RecyclerView.ViewHolder {
         return inflater.inflate(R.layout.question_viewholder, parent, false);
     }
 
-    public void bind(Question question) {
+    public void bind(final Question question) {
         titleView.setText(question.getTitle());
         descriptionView.setText(question.getDescription());
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(itemView.getContext(), AnswerActivity.class);
+                intent.putExtra(TITLE_EXTRA, question.getTitle());
+                intent.putExtra(DESCRIPTION_EXTRA, question.getDescription());
                 itemView.getContext().startActivity(intent);
             }
         });
