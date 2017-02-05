@@ -24,6 +24,7 @@
             android:maxLines="1"
             android:paddingLeft="16dp"
             android:paddingTop="14dp"
+            android:paddingBottom="2dp"
             android:text="Ask a Question"
             android:textColor="@color/primary_text"
             android:textSize="20sp" />

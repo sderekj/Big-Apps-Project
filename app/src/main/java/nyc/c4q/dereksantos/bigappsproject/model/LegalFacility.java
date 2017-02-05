@@ -1,31 +1,27 @@
 package nyc.c4q.dereksantos.bigappsproject.model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by SACC on 1/29/17.
  */
 public class LegalFacility implements ApiResponse {
 
-    private String site_name;
-    private String location_1_location;
+    @SerializedName("site_name")
+    private String title;
+
+    @SerializedName("location_1_location")
+    private String description;
+
+
     private String location_1_city;
     private String location_1_state;
     private String location_1_zip;
     private String contact_number;
 
-    public String getSite_name() {
-        return site_name;
-    }
 
-    public void setSite_name(String site_name) {
-        this.site_name = site_name;
-    }
-
-    public String getLocation_1_location() {
-        return location_1_location;
-    }
-
-    public void setLocation_1_location(String location_1_location) {
-        this.location_1_location = location_1_location;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getLocation_1_city() {
@@ -62,11 +58,11 @@ public class LegalFacility implements ApiResponse {
 
     @Override
     public String getTitle() {
-        return null;
+        return title;
     }
 
     @Override
     public String getDescription() {
-        return null;
+        return description;
     }
 }

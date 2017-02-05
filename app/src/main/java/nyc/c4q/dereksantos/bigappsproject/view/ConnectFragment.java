@@ -111,6 +111,11 @@ public class ConnectFragment extends Fragment {
                     public void onResponse(Call<List<LegalFacility>> call, Response<List<LegalFacility>> response) {
                         List<ApiResponse> list = new ArrayList<>();
                         list.addAll(response.body());
+                        for (ApiResponse apiResponse : list) {
+                            if (apiResponse.getTitle() == null) {
+                                list.remove(apiResponse);
+                            }
+                        }
                         RecyclerView.Adapter adapter = new ConnectAdapter(list);
                         recyclerView.setAdapter(adapter);
                     }

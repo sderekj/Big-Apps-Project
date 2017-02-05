@@ -46,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_gravity="end"
+            android:visibility="gone"
             android:height="36dp"
             android:gravity="end"
             android:minHeight="48dp"

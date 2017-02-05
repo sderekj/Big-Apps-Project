@@ -29,7 +29,16 @@ public class ConnectViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(ApiResponse apiResponse) {
-        titleTextView.setText(apiResponse.getTitle());
-        descriptionTextView.setText(apiResponse.getDescription());
+        if (apiResponse.getTitle() == null) {
+            titleTextView.setText("No information provided.");
+        } else {
+            titleTextView.setText(apiResponse.getTitle());
+        }
+
+        if (apiResponse.getDescription() == null) {
+            descriptionTextView.setText("No information provided.");
+        } else {
+            descriptionTextView.setText(apiResponse.getDescription());
+        }
     }
 }
